@@ -1,4 +1,4 @@
-package com.jwlee.tdd.제1장;
+package com.jwlee.tdd;
 
 public class Dollar {
 

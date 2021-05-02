@@ -1,6 +1,6 @@
-package com.jwlee.tdd.제1장;
+package com.jwlee.tdd;
 
-import org.assertj.core.api.Assertions;
+import com.jwlee.tdd.Dollar;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
