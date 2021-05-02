@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 public class 다중통화 {
+
     @Test
     @DisplayName("금액을 주식 수에 곱한 금액을 반환한다.")
     void testMultiplication() {
-        int price = 25;
-        int numberOfStocks = 1000;
-        int total = price * numberOfStocks;
-        assertThat(total).isEqualTo(25000);
+        Dollar five = new Dollar(5);
+        five.times(2);
+        assertThat(10).isEqualTo(five.amount);
     }
 }
