@@ -13,11 +13,19 @@ import static org.junit.jupiter.api.Assertions.*;
 public class 다중통화 {
 
     @Test
-    @DisplayName("금액을 주식 수에 곱한 금액을 반환한다.")
-    void testMultiplication() {
+    @DisplayName("달러 금액을 주식 수에 곱한 금액을 반환한다.")
+    void testDollarMultiplication() {
         Dollar five = new Dollar(5);
         assertEquals(five.times(2), new Dollar(10));
         assertEquals(five.times(3), new Dollar(15));
+    }
+
+    @Test
+    @DisplayName("프랑 금액을 주식 수에 곱한 금액을 반환한다.")
+    void testFrancMultiplication() {
+        Franc five = new Franc(5);
+        assertEquals(five.times(2), new Franc(10));
+        assertEquals(five.times(3), new Franc(15));
     }
 
     @Test
