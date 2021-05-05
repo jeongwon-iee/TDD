@@ -15,26 +15,26 @@ public class 다중통화 {
     @Test
     @DisplayName("달러 금액을 주식 수에 곱한 금액을 반환한다.")
     void testDollarMultiplication() {
-        Dollar five = new Dollar(5);
-        assertEquals(five.times(2), new Dollar(10));
-        assertEquals(five.times(3), new Dollar(15));
+        Money five = Money.dollar(5);
+        assertEquals(five.times(2), Money.dollar(10));
+        assertEquals(five.times(3), Money.dollar(15));
     }
 
     @Test
     @DisplayName("프랑 금액을 주식 수에 곱한 금액을 반환한다.")
     void testFrancMultiplication() {
-        Franc five = new Franc(5);
-        assertEquals(five.times(2), new Franc(10));
-        assertEquals(five.times(3), new Franc(15));
+        Franc five = Money.franc(5);
+        assertEquals(five.times(2), Money.franc(10));
+        assertEquals(five.times(3), Money.franc(15));
     }
 
     @Test
     @DisplayName("값 객체는 equals()를 갖는다.")
     void testEquality() {
-        assertTrue(new Dollar(5).equals(new Dollar(5)));
-        assertFalse(new Dollar(5).equals(new Dollar(6)));
-        assertTrue(new Franc(5).equals(new Franc(5)));
-        assertFalse(new Franc(5).equals(new Franc(6)));
-        assertFalse(new Franc(5).equals(new Dollar(5)));
+        assertTrue(Money.dollar(5).equals(Money.dollar(5)));
+        assertFalse(Money.dollar(5).equals(Money.dollar(6)));
+        assertTrue(Money.franc(5).equals(Money.franc(5)));
+        assertFalse(Money.franc(5).equals(Money.franc(6)));
+        assertFalse(Money.franc(5).equals(Money.dollar(5)));
     }
 }
